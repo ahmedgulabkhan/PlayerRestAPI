@@ -51,7 +51,7 @@ public class PlayerController {
         if(player == null) return new ResponseEntity<Player>(player, HttpStatus.NOT_FOUND);
         else {
             Player updatedPlayer = playerService.updatePlayerById(pId, updatedPlayerDetails);
-            return new ResponseEntity<Player>(player, HttpStatus.OK);
+            return new ResponseEntity<Player>(updatedPlayer, HttpStatus.OK);
         }
     }
 
